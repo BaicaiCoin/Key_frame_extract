@@ -1,0 +1,483 @@
+[
+    {
+        "type": "text",
+        "text": "\nYou are a data annotator, and you will receive video clips sourced from YouTube. Your task is to extract all the keyframes from the video clips.\n\n**VIDEO DETAILS**\nThe video clips consist of tutorials on various computer applications, presented through screen recordings of the operations, accompanied by voiceovers or subtitles.\n\n**KEYFRAMES SELECTION PRINCIPLE**\nSelection Process:\n1. Extract all \"user interface interactions\" from the video in sequence.\n2. Filter the interactions, removing redundant or non-interaction events.\n3. Combine the remaining interactions into \"unit actions.\"\n4. After each unit action is executed, wait for the page changes to stabilize, and then select the current frame as the keyframe.\n5. Record the timestamp of the keyframe in the video, and note which operations were performed during this unit action. Write them down in the memory.\n\nUser interface interactions:\nA single operation of user interaction, such as:\n-Click a button\n-Enter a text\n-Press a shortcut key\n-And so on\n\nUnit Action:\nDefinition:\n-Composed of one or a few interactions.\n-Capable of causing changes on the page.\n-After the execution of a unit action, the subsequent unit action must monitor the interface update to determine whether and how it can be executed. While there are no such restrictions between the operations within a unit action; they simply follow the order of execution.\nExamples of unit actions include:\n-Clicking a button to open a new page.\n-Entering a keyword in the search box and clicking the search button.\n-Modifying multiple configuration options within a settings interface.\n-And so on.\nTo explain with the second example: entering a keyword and clicking the search button are simply executed in sequence, making them a single unit action. However, the next operation, selecting the target entry, requires observing the updated search result list to determine which item to choose.\n\nNon-interaction:\nAny interface changes not caused by user interface interactions, most of which are due to post-production video edits, such as:\n-Opening and closing animations\n-Transition cuts\n-And so on\n\nRedundant interaction:\nOperations that are unrelated to the final goal, such as:\n-Incorrect actions that are undone after execution\n-Actions performed to help viewers understand the video, such as highlighting, zooming in or out, or scrolling the window\n-And so on\n\n\n\n\n**INPUT FORMAT**\n1. Due to the limitations of the input modality, the data consists of a combination of images and text, rather than the video itself.\n2. The image-text combination starts with the [video start] tag and ends with the [video end] tag.\n3. Images are screenshots taken every 2 second from the video, while the text corresponds to the video's narration subtitles. You are required to infer the content of the video between these screenshots based on the time gaps.When selecting keyframes, choose an existing screenshot as the keyframe.\n4. The presentation format for the image-text combination follows this pattern: (all screenshots from a specific time period in the video, arranged in order; three lines of subtitles spoken during that period), and this cycle repeats until the video ends.\n5. Subtitles will contain tags like \"<cs00001>\", \"<cs00002>\", \"<cs00003>\", with the format \"<cs n:05d>\". These tags are not part of the subtitles themselves but indicate that the subtitle corresponds to the timestamp when the nth image is displayed, ensuring synchronization between the images and the subtitles.\n\n\n\n**OUTPUT FORMAT**\nThe output format should always be a JSON object, which is a list containing the following fields:\n{\n  \"keyframe\": \"keyframe image number\",\n  \"goal\": \"A brief summary of what was done between the previous keyframe and this keyframe\",\n  \"action\": \"A detailed description of the operations performed in the unit action corresponding to the keyframe\"\n}\n"
+    },
+    {
+        "type": "text",
+        "text": "[video start]"
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00000",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00001",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00002",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00003",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00004",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00005",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00006",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00007",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00008",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00009",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00010",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00011",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "text",
+        "text": "<cs00000> Hello everyone, in <cs00001> this video I will show you how to <cs00002> run HTML files using Visual <cs00003> Studio Code. So we need <cs00004> to install a new extension called OpenEnd <cs00005> Browser. So let's <cs00006> click on this extensions button and <cs00007> here let's type OpenEnd <cs00008> Browser. <cs00009> <cs00010> <cs00011> "
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00012",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00013",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00014",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00015",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00016",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00017",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00018",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00019",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "text",
+        "text": "Then <cs00012> let's click on this first extension. <cs00013> So this is the <cs00014> name of the developer and <cs00015> this is the number of times it <cs00016> has been installed. To install <cs00017> this extension we need just to click <cs00018> on this install button. <cs00019> "
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00020",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00021",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00022",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00023",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00024",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00025",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00026",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00027",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00028",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00029",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "text",
+        "text": "Now the extension <cs00020> is installed correctly so we <cs00021> can close this page and also <cs00022> we can hide the extensions. <cs00023> Now let's create a new HTML <cs00024> file. So let's click on file, <cs00025> then open folder. <cs00026> Then I <cs00027> will create a new folder on the desktop. <cs00028> <cs00029> "
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00030",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00031",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00032",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00033",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00034",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "text",
+        "text": "I will call it Website. <cs00030> <cs00031> Let's select this folder. <cs00032> Then let's <cs00033> create a new HTML file. <cs00034> "
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00035",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00036",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00037",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00038",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00039",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00040",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00041",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00042",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00043",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00044",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "text",
+        "text": "I will call it home.html. <cs00035> <cs00036> <cs00037> <cs00038> Now let's write some HTML code <cs00039> so we can type exclamation <cs00040> mark. Then let's hit enter <cs00041> and we obtain this <cs00042> template. We can change the <cs00043> title. <cs00044> "
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00045",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00046",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00047",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00048",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00049",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00050",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00051",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00052",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00053",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00054",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00055",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "text",
+        "text": "And <cs00045> also we can write some text in the body. <cs00046> <cs00047> <cs00048> Now let's save this file <cs00049> and to open it in the browser <cs00050> we can either make a right click here <cs00051> and then open in <cs00052> default browser or also <cs00053> we can make a right click on the file <cs00054> in the explorer. <cs00055> "
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00056",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00057",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00058",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00059",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00060",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00061",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "image_url",
+        "image_url": {
+            "url": "data:image/jpeg;base64,frame_00062",
+            "detail": "low"
+        }
+    },
+    {
+        "type": "text",
+        "text": "Then open in default browser. <cs00056> <cs00057> And we obtain this page <cs00058> in the browser. In the next <cs00059> video I will show you how to set <cs00060> up Visual Studio Code for <cs00061> web development using an extension <cs00062> "
+    },
+    {
+        "type": "text",
+        "text": "[video end]"
+    }
+]
