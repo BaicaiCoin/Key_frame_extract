@@ -1,0 +1,107 @@
+[
+  {
+    "start_time": 0.86,
+    "end_time": 6.92,
+    "text": " Hello everyone, in this video I will show you how to run HTML files using Visual Studio Code."
+  },
+  {
+    "start_time": 7.58,
+    "end_time": 11.02,
+    "text": " So we need to install a new extension called OpenEnd Browser."
+  },
+  {
+    "start_time": 11.64,
+    "end_time": 17.2,
+    "text": " So let's click on this extensions button and here let's type OpenEnd Browser."
+  },
+  {
+    "start_time": 23.78,
+    "end_time": 25.84,
+    "text": " Then let's click on this first extension."
+  },
+  {
+    "start_time": 27.0,
+    "end_time": 32.92,
+    "text": " So this is the name of the developer and this is the number of times it has been installed."
+  },
+  {
+    "start_time": 32.92,
+    "end_time": 37.42,
+    "text": " To install this extension we need just to click on this install button."
+  },
+  {
+    "start_time": 39.48,
+    "end_time": 45.5,
+    "text": " Now the extension is installed correctly so we can close this page and also we can hide the extensions."
+  },
+  {
+    "start_time": 46.54,
+    "end_time": 52.32,
+    "text": " Now let's create a new HTML file. So let's click on file, then open folder."
+  },
+  {
+    "start_time": 53.52,
+    "end_time": 56.02,
+    "text": " Then I will create a new folder on the desktop."
+  },
+  {
+    "start_time": 58.28,
+    "end_time": 59.72,
+    "text": " I will call it Website."
+  },
+  {
+    "start_time": 62.92,
+    "end_time": 64.22,
+    "text": " Let's select this folder."
+  },
+  {
+    "start_time": 65.72,
+    "end_time": 67.96,
+    "text": " Then let's create a new HTML file."
+  },
+  {
+    "start_time": 68.88,
+    "end_time": 71.2,
+    "text": " I will call it home.html."
+  },
+  {
+    "start_time": 76.12,
+    "end_time": 80.58,
+    "text": " Now let's write some HTML code so we can type exclamation mark."
+  },
+  {
+    "start_time": 81.14,
+    "end_time": 86.38,
+    "text": " Then let's hit enter and we obtain this template. We can change the title."
+  },
+  {
+    "start_time": 89.88,
+    "end_time": 92.18,
+    "text": " And also we can write some text in the body."
+  },
+  {
+    "start_time": 96.16,
+    "end_time": 104.9,
+    "text": " Now let's save this file and to open it in the browser we can either make a right click here and then open in default browser"
+  },
+  {
+    "start_time": 105.8,
+    "end_time": 109.06,
+    "text": " or also we can make a right click on the file in the explorer."
+  },
+  {
+    "start_time": 110.04,
+    "end_time": 112.08,
+    "text": " Then open in default browser."
+  },
+  {
+    "start_time": 114.74,
+    "end_time": 116.82,
+    "text": " And we obtain this page in the browser."
+  },
+  {
+    "start_time": 117.52,
+    "end_time": 125.48,
+    "text": " In the next video I will show you how to set up Visual Studio Code for web development using an extension called LiveServer."
+  }
+]

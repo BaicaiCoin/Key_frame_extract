@@ -1,0 +1,2235 @@
+{
+  "text": " Hello everyone, in this video I will show you how to run HTML files using Visual Studio Code. So we need to install a new extension called OpenEnd Browser. So let's click on this extensions button and here let's type OpenEnd Browser. Then let's click on this first extension. So this is the name of the developer and this is the number of times it has been installed. To install this extension we need just to click on this install button. Now the extension is installed correctly so we can close this page and also we can hide the extensions. Now let's create a new HTML file. So let's click on file, then open folder. Then I will create a new folder on the desktop. I will call it Website. Let's select this folder. Then let's create a new HTML file. I will call it home.html. Now let's write some HTML code so we can type exclamation mark. Then let's hit enter and we obtain this template. We can change the title. And also we can write some text in the body. Now let's save this file and to open it in the browser we can either make a right click here and then open in default browser or also we can make a right click on the file in the explorer. Then open in default browser. And we obtain this page in the browser. In the next video I will show you how to set up Visual Studio Code for web development using an extension called LiveServer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.86,
+      "end": 6.92,
+      "text": " Hello everyone, in this video I will show you how to run HTML files using Visual Studio Code.",
+      "tokens": [
+        50364,
+        2425,
+        1518,
+        11,
+        294,
+        341,
+        960,
+        286,
+        486,
+        855,
+        291,
+        577,
+        281,
+        1190,
+        17995,
+        7098,
+        1228,
+        23187,
+        13500,
+        15549,
+        13,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22422443980902013,
+      "compression_ratio": 1.5804597701149425,
+      "no_speech_prob": 0.041674792766571045,
+      "confidence": 0.866,
+      "words": [
+        {
+          "text": "Hello",
+          "start": 0.86,
+          "end": 1.12,
+          "confidence": 0.896
+        },
+        {
+          "text": "everyone,",
+          "start": 1.12,
+          "end": 1.54,
+          "confidence": 0.933
+        },
+        {
+          "text": "in",
+          "start": 1.98,
+          "end": 2.08,
+          "confidence": 0.88
+        },
+        {
+          "text": "this",
+          "start": 2.08,
+          "end": 2.3,
+          "confidence": 0.998
+        },
+        {
+          "text": "video",
+          "start": 2.3,
+          "end": 2.62,
+          "confidence": 0.998
+        },
+        {
+          "text": "I",
+          "start": 2.62,
+          "end": 2.84,
+          "confidence": 0.807
+        },
+        {
+          "text": "will",
+          "start": 2.84,
+          "end": 3.02,
+          "confidence": 0.981
+        },
+        {
+          "text": "show",
+          "start": 3.02,
+          "end": 3.22,
+          "confidence": 0.986
+        },
+        {
+          "text": "you",
+          "start": 3.22,
+          "end": 3.46,
+          "confidence": 0.984
+        },
+        {
+          "text": "how",
+          "start": 3.46,
+          "end": 3.82,
+          "confidence": 0.951
+        },
+        {
+          "text": "to",
+          "start": 3.82,
+          "end": 4.04,
+          "confidence": 0.995
+        },
+        {
+          "text": "run",
+          "start": 4.04,
+          "end": 4.26,
+          "confidence": 0.984
+        },
+        {
+          "text": "HTML",
+          "start": 4.26,
+          "end": 4.82,
+          "confidence": 0.766
+        },
+        {
+          "text": "files",
+          "start": 4.82,
+          "end": 5.28,
+          "confidence": 0.985
+        },
+        {
+          "text": "using",
+          "start": 5.28,
+          "end": 5.8,
+          "confidence": 0.961
+        },
+        {
+          "text": "Visual",
+          "start": 5.8,
+          "end": 6.2,
+          "confidence": 0.588
+        },
+        {
+          "text": "Studio",
+          "start": 6.2,
+          "end": 6.6,
+          "confidence": 0.684
+        },
+        {
+          "text": "Code.",
+          "start": 6.6,
+          "end": 6.92,
+          "confidence": 0.487
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 7.58,
+      "end": 11.02,
+      "text": " So we need to install a new extension called OpenEnd Browser.",
+      "tokens": [
+        50714,
+        407,
+        321,
+        643,
+        281,
+        3625,
+        257,
+        777,
+        10320,
+        1219,
+        7238,
+        36952,
+        1603,
+        30947,
+        13,
+        50914
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22422443980902013,
+      "compression_ratio": 1.5804597701149425,
+      "no_speech_prob": 0.041674792766571045,
+      "confidence": 0.803,
+      "words": [
+        {
+          "text": "So",
+          "start": 7.58,
+          "end": 7.74,
+          "confidence": 0.911
+        },
+        {
+          "text": "we",
+          "start": 7.74,
+          "end": 7.92,
+          "confidence": 0.827
+        },
+        {
+          "text": "need",
+          "start": 7.92,
+          "end": 8.04,
+          "confidence": 0.998
+        },
+        {
+          "text": "to",
+          "start": 8.04,
+          "end": 8.2,
+          "confidence": 0.999
+        },
+        {
+          "text": "install",
+          "start": 8.2,
+          "end": 8.58,
+          "confidence": 0.994
+        },
+        {
+          "text": "a",
+          "start": 8.58,
+          "end": 8.8,
+          "confidence": 0.992
+        },
+        {
+          "text": "new",
+          "start": 8.8,
+          "end": 8.92,
+          "confidence": 0.998
+        },
+        {
+          "text": "extension",
+          "start": 8.92,
+          "end": 9.38,
+          "confidence": 0.99
+        },
+        {
+          "text": "called",
+          "start": 9.38,
+          "end": 9.96,
+          "confidence": 0.974
+        },
+        {
+          "text": "OpenEnd",
+          "start": 9.96,
+          "end": 10.64,
+          "confidence": 0.37
+        },
+        {
+          "text": "Browser.",
+          "start": 10.64,
+          "end": 11.02,
+          "confidence": 0.77
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 11.64,
+      "end": 17.2,
+      "text": " So let's click on this extensions button and here let's type OpenEnd Browser.",
+      "tokens": [
+        50914,
+        407,
+        718,
+        311,
+        2052,
+        322,
+        341,
+        25129,
+        2960,
+        293,
+        510,
+        718,
+        311,
+        2010,
+        7238,
+        36952,
+        1603,
+        30947,
+        13,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22422443980902013,
+      "compression_ratio": 1.5804597701149425,
+      "no_speech_prob": 0.041674792766571045,
+      "confidence": 0.863,
+      "words": [
+        {
+          "text": "So",
+          "start": 11.64,
+          "end": 11.76,
+          "confidence": 0.951
+        },
+        {
+          "text": "let's",
+          "start": 11.76,
+          "end": 12.04,
+          "confidence": 0.947
+        },
+        {
+          "text": "click",
+          "start": 12.04,
+          "end": 12.26,
+          "confidence": 0.998
+        },
+        {
+          "text": "on",
+          "start": 12.26,
+          "end": 12.54,
+          "confidence": 0.994
+        },
+        {
+          "text": "this",
+          "start": 12.54,
+          "end": 12.78,
+          "confidence": 0.976
+        },
+        {
+          "text": "extensions",
+          "start": 12.78,
+          "end": 13.4,
+          "confidence": 0.627
+        },
+        {
+          "text": "button",
+          "start": 13.4,
+          "end": 13.88,
+          "confidence": 0.961
+        },
+        {
+          "text": "and",
+          "start": 13.88,
+          "end": 15.1,
+          "confidence": 0.364
+        },
+        {
+          "text": "here",
+          "start": 15.1,
+          "end": 15.34,
+          "confidence": 0.978
+        },
+        {
+          "text": "let's",
+          "start": 15.34,
+          "end": 15.66,
+          "confidence": 0.966
+        },
+        {
+          "text": "type",
+          "start": 15.66,
+          "end": 15.92,
+          "confidence": 0.997
+        },
+        {
+          "text": "OpenEnd",
+          "start": 15.92,
+          "end": 16.8,
+          "confidence": 0.816
+        },
+        {
+          "text": "Browser.",
+          "start": 16.8,
+          "end": 17.2,
+          "confidence": 0.86
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 23.78,
+      "end": 25.84,
+      "text": " Then let's click on this first extension.",
+      "tokens": [
+        51514,
+        1396,
+        718,
+        311,
+        2052,
+        322,
+        341,
+        700,
+        10320,
+        13,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22422443980902013,
+      "compression_ratio": 1.5804597701149425,
+      "no_speech_prob": 0.041674792766571045,
+      "confidence": 0.928,
+      "words": [
+        {
+          "text": "Then",
+          "start": 23.78,
+          "end": 24.06,
+          "confidence": 0.641
+        },
+        {
+          "text": "let's",
+          "start": 24.06,
+          "end": 24.42,
+          "confidence": 0.973
+        },
+        {
+          "text": "click",
+          "start": 24.42,
+          "end": 24.62,
+          "confidence": 0.999
+        },
+        {
+          "text": "on",
+          "start": 24.62,
+          "end": 24.86,
+          "confidence": 0.995
+        },
+        {
+          "text": "this",
+          "start": 24.86,
+          "end": 25.08,
+          "confidence": 0.996
+        },
+        {
+          "text": "first",
+          "start": 25.08,
+          "end": 25.34,
+          "confidence": 0.923
+        },
+        {
+          "text": "extension.",
+          "start": 25.34,
+          "end": 25.84,
+          "confidence": 0.994
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 2600,
+      "start": 27.0,
+      "end": 32.92,
+      "text": " So this is the name of the developer and this is the number of times it has been installed.",
+      "tokens": [
+        50364,
+        407,
+        341,
+        307,
+        264,
+        1315,
+        295,
+        264,
+        10754,
+        293,
+        341,
+        307,
+        264,
+        1230,
+        295,
+        1413,
+        309,
+        575,
+        668,
+        8899,
+        13,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.09902909823826381,
+      "compression_ratio": 1.7411167512690355,
+      "no_speech_prob": 0.005888841114938259,
+      "confidence": 0.979,
+      "words": [
+        {
+          "text": "So",
+          "start": 27.0,
+          "end": 27.24,
+          "confidence": 0.959
+        },
+        {
+          "text": "this",
+          "start": 27.24,
+          "end": 27.5,
+          "confidence": 0.98
+        },
+        {
+          "text": "is",
+          "start": 27.5,
+          "end": 27.76,
+          "confidence": 0.984
+        },
+        {
+          "text": "the",
+          "start": 27.76,
+          "end": 28.1,
+          "confidence": 0.995
+        },
+        {
+          "text": "name",
+          "start": 28.1,
+          "end": 28.36,
+          "confidence": 0.988
+        },
+        {
+          "text": "of",
+          "start": 28.36,
+          "end": 28.62,
+          "confidence": 0.998
+        },
+        {
+          "text": "the",
+          "start": 28.62,
+          "end": 28.86,
+          "confidence": 0.995
+        },
+        {
+          "text": "developer",
+          "start": 28.86,
+          "end": 29.44,
+          "confidence": 0.992
+        },
+        {
+          "text": "and",
+          "start": 29.44,
+          "end": 30.22,
+          "confidence": 0.865
+        },
+        {
+          "text": "this",
+          "start": 30.22,
+          "end": 30.54,
+          "confidence": 0.953
+        },
+        {
+          "text": "is",
+          "start": 30.54,
+          "end": 30.78,
+          "confidence": 0.971
+        },
+        {
+          "text": "the",
+          "start": 30.78,
+          "end": 31.0,
+          "confidence": 0.994
+        },
+        {
+          "text": "number",
+          "start": 31.0,
+          "end": 31.28,
+          "confidence": 0.996
+        },
+        {
+          "text": "of",
+          "start": 31.28,
+          "end": 31.48,
+          "confidence": 0.996
+        },
+        {
+          "text": "times",
+          "start": 31.48,
+          "end": 31.76,
+          "confidence": 0.991
+        },
+        {
+          "text": "it",
+          "start": 31.76,
+          "end": 32.12,
+          "confidence": 0.98
+        },
+        {
+          "text": "has",
+          "start": 32.12,
+          "end": 32.32,
+          "confidence": 0.982
+        },
+        {
+          "text": "been",
+          "start": 32.32,
+          "end": 32.56,
+          "confidence": 0.995
+        },
+        {
+          "text": "installed.",
+          "start": 32.56,
+          "end": 32.92,
+          "confidence": 0.992
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 2600,
+      "start": 32.92,
+      "end": 37.42,
+      "text": " To install this extension we need just to click on this install button.",
+      "tokens": [
+        50714,
+        1407,
+        3625,
+        341,
+        10320,
+        321,
+        643,
+        445,
+        281,
+        2052,
+        322,
+        341,
+        3625,
+        2960,
+        13,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.09902909823826381,
+      "compression_ratio": 1.7411167512690355,
+      "no_speech_prob": 0.005888841114938259,
+      "confidence": 0.948,
+      "words": [
+        {
+          "text": "To",
+          "start": 32.92,
+          "end": 33.8,
+          "confidence": 0.995
+        },
+        {
+          "text": "install",
+          "start": 33.8,
+          "end": 34.18,
+          "confidence": 0.991
+        },
+        {
+          "text": "this",
+          "start": 34.18,
+          "end": 34.46,
+          "confidence": 0.994
+        },
+        {
+          "text": "extension",
+          "start": 34.46,
+          "end": 34.98,
+          "confidence": 0.982
+        },
+        {
+          "text": "we",
+          "start": 34.98,
+          "end": 35.34,
+          "confidence": 0.732
+        },
+        {
+          "text": "need",
+          "start": 35.34,
+          "end": 35.48,
+          "confidence": 0.949
+        },
+        {
+          "text": "just",
+          "start": 35.48,
+          "end": 35.72,
+          "confidence": 0.963
+        },
+        {
+          "text": "to",
+          "start": 35.72,
+          "end": 35.92,
+          "confidence": 0.978
+        },
+        {
+          "text": "click",
+          "start": 35.92,
+          "end": 36.12,
+          "confidence": 0.998
+        },
+        {
+          "text": "on",
+          "start": 36.12,
+          "end": 36.38,
+          "confidence": 0.99
+        },
+        {
+          "text": "this",
+          "start": 36.38,
+          "end": 36.6,
+          "confidence": 0.986
+        },
+        {
+          "text": "install",
+          "start": 36.6,
+          "end": 37.1,
+          "confidence": 0.824
+        },
+        {
+          "text": "button.",
+          "start": 37.1,
+          "end": 37.42,
+          "confidence": 0.991
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 2600,
+      "start": 39.48,
+      "end": 45.5,
+      "text": " Now the extension is installed correctly so we can close this page and also we can hide the extensions.",
+      "tokens": [
+        51014,
+        823,
+        264,
+        10320,
+        307,
+        8899,
+        8944,
+        370,
+        321,
+        393,
+        1998,
+        341,
+        3028,
+        293,
+        611,
+        321,
+        393,
+        6479,
+        264,
+        25129,
+        13,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.09902909823826381,
+      "compression_ratio": 1.7411167512690355,
+      "no_speech_prob": 0.005888841114938259,
+      "confidence": 0.958,
+      "words": [
+        {
+          "text": "Now",
+          "start": 39.48,
+          "end": 39.68,
+          "confidence": 0.997
+        },
+        {
+          "text": "the",
+          "start": 39.68,
+          "end": 39.86,
+          "confidence": 0.975
+        },
+        {
+          "text": "extension",
+          "start": 39.86,
+          "end": 40.24,
+          "confidence": 0.991
+        },
+        {
+          "text": "is",
+          "start": 40.24,
+          "end": 40.56,
+          "confidence": 0.995
+        },
+        {
+          "text": "installed",
+          "start": 40.56,
+          "end": 41.04,
+          "confidence": 0.998
+        },
+        {
+          "text": "correctly",
+          "start": 41.04,
+          "end": 41.58,
+          "confidence": 0.999
+        },
+        {
+          "text": "so",
+          "start": 41.58,
+          "end": 41.92,
+          "confidence": 0.587
+        },
+        {
+          "text": "we",
+          "start": 41.92,
+          "end": 42.08,
+          "confidence": 0.994
+        },
+        {
+          "text": "can",
+          "start": 42.08,
+          "end": 42.22,
+          "confidence": 0.998
+        },
+        {
+          "text": "close",
+          "start": 42.22,
+          "end": 42.5,
+          "confidence": 0.995
+        },
+        {
+          "text": "this",
+          "start": 42.5,
+          "end": 42.88,
+          "confidence": 0.989
+        },
+        {
+          "text": "page",
+          "start": 42.88,
+          "end": 43.2,
+          "confidence": 0.999
+        },
+        {
+          "text": "and",
+          "start": 43.2,
+          "end": 43.64,
+          "confidence": 0.874
+        },
+        {
+          "text": "also",
+          "start": 43.64,
+          "end": 44.02,
+          "confidence": 0.981
+        },
+        {
+          "text": "we",
+          "start": 44.02,
+          "end": 44.24,
+          "confidence": 0.985
+        },
+        {
+          "text": "can",
+          "start": 44.24,
+          "end": 44.38,
+          "confidence": 0.997
+        },
+        {
+          "text": "hide",
+          "start": 44.38,
+          "end": 44.68,
+          "confidence": 0.995
+        },
+        {
+          "text": "the",
+          "start": 44.68,
+          "end": 45.02,
+          "confidence": 0.991
+        },
+        {
+          "text": "extensions.",
+          "start": 45.02,
+          "end": 45.5,
+          "confidence": 0.985
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 2600,
+      "start": 46.54,
+      "end": 52.32,
+      "text": " Now let's create a new HTML file. So let's click on file, then open folder.",
+      "tokens": [
+        51364,
+        823,
+        718,
+        311,
+        1884,
+        257,
+        777,
+        17995,
+        3991,
+        13,
+        407,
+        718,
+        311,
+        2052,
+        322,
+        3991,
+        11,
+        550,
+        1269,
+        10820,
+        13,
+        51714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.09902909823826381,
+      "compression_ratio": 1.7411167512690355,
+      "no_speech_prob": 0.005888841114938259,
+      "confidence": 0.885,
+      "words": [
+        {
+          "text": "Now",
+          "start": 46.54,
+          "end": 46.74,
+          "confidence": 0.853
+        },
+        {
+          "text": "let's",
+          "start": 46.74,
+          "end": 47.04,
+          "confidence": 0.986
+        },
+        {
+          "text": "create",
+          "start": 47.04,
+          "end": 47.36,
+          "confidence": 0.997
+        },
+        {
+          "text": "a",
+          "start": 47.36,
+          "end": 47.7,
+          "confidence": 0.995
+        },
+        {
+          "text": "new",
+          "start": 47.7,
+          "end": 47.82,
+          "confidence": 0.999
+        },
+        {
+          "text": "HTML",
+          "start": 47.82,
+          "end": 48.34,
+          "confidence": 0.909
+        },
+        {
+          "text": "file.",
+          "start": 48.34,
+          "end": 48.8,
+          "confidence": 0.991
+        },
+        {
+          "text": "So",
+          "start": 49.06,
+          "end": 49.14,
+          "confidence": 0.628
+        },
+        {
+          "text": "let's",
+          "start": 49.14,
+          "end": 49.42,
+          "confidence": 0.991
+        },
+        {
+          "text": "click",
+          "start": 49.42,
+          "end": 49.64,
+          "confidence": 0.998
+        },
+        {
+          "text": "on",
+          "start": 49.64,
+          "end": 49.9,
+          "confidence": 0.998
+        },
+        {
+          "text": "file,",
+          "start": 49.9,
+          "end": 50.26,
+          "confidence": 0.555
+        },
+        {
+          "text": "then",
+          "start": 50.88,
+          "end": 51.3,
+          "confidence": 0.949
+        },
+        {
+          "text": "open",
+          "start": 51.3,
+          "end": 51.94,
+          "confidence": 0.53
+        },
+        {
+          "text": "folder.",
+          "start": 51.94,
+          "end": 52.32,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 5300,
+      "start": 53.52,
+      "end": 56.02,
+      "text": " Then I will create a new folder on the desktop.",
+      "tokens": [
+        50364,
+        1396,
+        286,
+        486,
+        1884,
+        257,
+        777,
+        10820,
+        322,
+        264,
+        14502,
+        13,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.1394981733510192,
+      "compression_ratio": 1.5310344827586206,
+      "no_speech_prob": 0.022403310984373093,
+      "confidence": 0.987,
+      "words": [
+        {
+          "text": "Then",
+          "start": 53.52,
+          "end": 53.82,
+          "confidence": 0.989
+        },
+        {
+          "text": "I",
+          "start": 53.82,
+          "end": 54.08,
+          "confidence": 0.967
+        },
+        {
+          "text": "will",
+          "start": 54.08,
+          "end": 54.24,
+          "confidence": 0.974
+        },
+        {
+          "text": "create",
+          "start": 54.24,
+          "end": 54.56,
+          "confidence": 0.998
+        },
+        {
+          "text": "a",
+          "start": 54.56,
+          "end": 54.86,
+          "confidence": 0.987
+        },
+        {
+          "text": "new",
+          "start": 54.86,
+          "end": 54.96,
+          "confidence": 0.994
+        },
+        {
+          "text": "folder",
+          "start": 54.96,
+          "end": 55.24,
+          "confidence": 0.999
+        },
+        {
+          "text": "on",
+          "start": 55.24,
+          "end": 55.48,
+          "confidence": 0.994
+        },
+        {
+          "text": "the",
+          "start": 55.48,
+          "end": 55.62,
+          "confidence": 0.994
+        },
+        {
+          "text": "desktop.",
+          "start": 55.62,
+          "end": 56.02,
+          "confidence": 0.973
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "seek": 5300,
+      "start": 58.28,
+      "end": 59.72,
+      "text": " I will call it Website.",
+      "tokens": [
+        50614,
+        286,
+        486,
+        818,
+        309,
+        45347,
+        642,
+        13,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.1394981733510192,
+      "compression_ratio": 1.5310344827586206,
+      "no_speech_prob": 0.022403310984373093,
+      "confidence": 0.885,
+      "words": [
+        {
+          "text": "I",
+          "start": 58.28,
+          "end": 58.4,
+          "confidence": 0.997
+        },
+        {
+          "text": "will",
+          "start": 58.4,
+          "end": 58.56,
+          "confidence": 0.991
+        },
+        {
+          "text": "call",
+          "start": 58.56,
+          "end": 58.78,
+          "confidence": 0.994
+        },
+        {
+          "text": "it",
+          "start": 58.78,
+          "end": 59.0,
+          "confidence": 0.998
+        },
+        {
+          "text": "Website.",
+          "start": 59.0,
+          "end": 59.72,
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "seek": 5300,
+      "start": 62.92,
+      "end": 64.22,
+      "text": " Let's select this folder.",
+      "tokens": [
+        50814,
+        961,
+        311,
+        3048,
+        341,
+        10820,
+        13,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.1394981733510192,
+      "compression_ratio": 1.5310344827586206,
+      "no_speech_prob": 0.022403310984373093,
+      "confidence": 0.993,
+      "words": [
+        {
+          "text": "Let's",
+          "start": 62.92,
+          "end": 63.26,
+          "confidence": 0.991
+        },
+        {
+          "text": "select",
+          "start": 63.26,
+          "end": 63.52,
+          "confidence": 0.988
+        },
+        {
+          "text": "this",
+          "start": 63.52,
+          "end": 63.9,
+          "confidence": 0.996
+        },
+        {
+          "text": "folder.",
+          "start": 63.9,
+          "end": 64.22,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "seek": 5300,
+      "start": 65.72,
+      "end": 67.96,
+      "text": " Then let's create a new HTML file.",
+      "tokens": [
+        50964,
+        1396,
+        718,
+        311,
+        1884,
+        257,
+        777,
+        17995,
+        3991,
+        13,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.1394981733510192,
+      "compression_ratio": 1.5310344827586206,
+      "no_speech_prob": 0.022403310984373093,
+      "confidence": 0.991,
+      "words": [
+        {
+          "text": "Then",
+          "start": 65.72,
+          "end": 66.0,
+          "confidence": 0.991
+        },
+        {
+          "text": "let's",
+          "start": 66.0,
+          "end": 66.34,
+          "confidence": 0.994
+        },
+        {
+          "text": "create",
+          "start": 66.34,
+          "end": 66.64,
+          "confidence": 0.998
+        },
+        {
+          "text": "a",
+          "start": 66.64,
+          "end": 66.96,
+          "confidence": 0.99
+        },
+        {
+          "text": "new",
+          "start": 66.96,
+          "end": 67.08,
+          "confidence": 0.999
+        },
+        {
+          "text": "HTML",
+          "start": 67.08,
+          "end": 67.6,
+          "confidence": 0.969
+        },
+        {
+          "text": "file.",
+          "start": 67.6,
+          "end": 67.96,
+          "confidence": 0.993
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "seek": 5300,
+      "start": 68.88,
+      "end": 71.2,
+      "text": " I will call it home.html.",
+      "tokens": [
+        51114,
+        286,
+        486,
+        818,
+        309,
+        1280,
+        13,
+        357,
+        15480,
+        13,
+        51314
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.1394981733510192,
+      "compression_ratio": 1.5310344827586206,
+      "no_speech_prob": 0.022403310984373093,
+      "confidence": 0.9,
+      "words": [
+        {
+          "text": "I",
+          "start": 68.88,
+          "end": 69.02,
+          "confidence": 0.997
+        },
+        {
+          "text": "will",
+          "start": 69.02,
+          "end": 69.2,
+          "confidence": 0.991
+        },
+        {
+          "text": "call",
+          "start": 69.2,
+          "end": 69.42,
+          "confidence": 0.996
+        },
+        {
+          "text": "it",
+          "start": 69.42,
+          "end": 69.66,
+          "confidence": 0.997
+        },
+        {
+          "text": "home.html.",
+          "start": 69.66,
+          "end": 71.2,
+          "confidence": 0.813
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "seek": 5300,
+      "start": 76.12,
+      "end": 80.58,
+      "text": " Now let's write some HTML code so we can type exclamation mark.",
+      "tokens": [
+        51514,
+        823,
+        718,
+        311,
+        2464,
+        512,
+        17995,
+        3089,
+        370,
+        321,
+        393,
+        2010,
+        1624,
+        43233,
+        1491,
+        13,
+        51764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.1394981733510192,
+      "compression_ratio": 1.5310344827586206,
+      "no_speech_prob": 0.022403310984373093,
+      "confidence": 0.937,
+      "words": [
+        {
+          "text": "Now",
+          "start": 76.12,
+          "end": 76.36,
+          "confidence": 0.78
+        },
+        {
+          "text": "let's",
+          "start": 76.36,
+          "end": 76.7,
+          "confidence": 0.99
+        },
+        {
+          "text": "write",
+          "start": 76.7,
+          "end": 76.9,
+          "confidence": 0.993
+        },
+        {
+          "text": "some",
+          "start": 76.9,
+          "end": 77.18,
+          "confidence": 0.996
+        },
+        {
+          "text": "HTML",
+          "start": 77.18,
+          "end": 77.78,
+          "confidence": 0.909
+        },
+        {
+          "text": "code",
+          "start": 77.78,
+          "end": 78.2,
+          "confidence": 0.971
+        },
+        {
+          "text": "so",
+          "start": 78.2,
+          "end": 78.62,
+          "confidence": 0.678
+        },
+        {
+          "text": "we",
+          "start": 78.62,
+          "end": 78.82,
+          "confidence": 0.993
+        },
+        {
+          "text": "can",
+          "start": 78.82,
+          "end": 79.02,
+          "confidence": 0.996
+        },
+        {
+          "text": "type",
+          "start": 79.02,
+          "end": 79.34,
+          "confidence": 0.998
+        },
+        {
+          "text": "exclamation",
+          "start": 79.34,
+          "end": 80.16,
+          "confidence": 0.956
+        },
+        {
+          "text": "mark.",
+          "start": 80.16,
+          "end": 80.58,
+          "confidence": 0.992
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "seek": 8100,
+      "start": 81.14,
+      "end": 86.38,
+      "text": " Then let's hit enter and we obtain this template. We can change the title.",
+      "tokens": [
+        50364,
+        1396,
+        718,
+        311,
+        2045,
+        3242,
+        293,
+        321,
+        12701,
+        341,
+        12379,
+        13,
+        492,
+        393,
+        1319,
+        264,
+        4876,
+        13,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.14340555667877197,
+      "compression_ratio": 1.701657458563536,
+      "no_speech_prob": 0.010492893867194653,
+      "confidence": 0.881,
+      "words": [
+        {
+          "text": "Then",
+          "start": 81.14,
+          "end": 81.38,
+          "confidence": 0.981
+        },
+        {
+          "text": "let's",
+          "start": 81.38,
+          "end": 81.68,
+          "confidence": 0.994
+        },
+        {
+          "text": "hit",
+          "start": 81.68,
+          "end": 81.84,
+          "confidence": 0.993
+        },
+        {
+          "text": "enter",
+          "start": 81.84,
+          "end": 82.22,
+          "confidence": 0.631
+        },
+        {
+          "text": "and",
+          "start": 82.22,
+          "end": 83.32,
+          "confidence": 0.511
+        },
+        {
+          "text": "we",
+          "start": 83.32,
+          "end": 83.52,
+          "confidence": 0.98
+        },
+        {
+          "text": "obtain",
+          "start": 83.52,
+          "end": 83.78,
+          "confidence": 0.957
+        },
+        {
+          "text": "this",
+          "start": 83.78,
+          "end": 84.1,
+          "confidence": 0.996
+        },
+        {
+          "text": "template.",
+          "start": 84.1,
+          "end": 84.5,
+          "confidence": 0.997
+        },
+        {
+          "text": "We",
+          "start": 84.82,
+          "end": 85.14,
+          "confidence": 0.524
+        },
+        {
+          "text": "can",
+          "start": 85.14,
+          "end": 85.36,
+          "confidence": 0.998
+        },
+        {
+          "text": "change",
+          "start": 85.36,
+          "end": 85.68,
+          "confidence": 0.998
+        },
+        {
+          "text": "the",
+          "start": 85.68,
+          "end": 86.02,
+          "confidence": 0.996
+        },
+        {
+          "text": "title.",
+          "start": 86.02,
+          "end": 86.38,
+          "confidence": 0.991
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "seek": 8100,
+      "start": 89.88,
+      "end": 92.18,
+      "text": " And also we can write some text in the body.",
+      "tokens": [
+        50764,
+        400,
+        611,
+        321,
+        393,
+        2464,
+        512,
+        2487,
+        294,
+        264,
+        1772,
+        13,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.14340555667877197,
+      "compression_ratio": 1.701657458563536,
+      "no_speech_prob": 0.010492893867194653,
+      "confidence": 0.958,
+      "words": [
+        {
+          "text": "And",
+          "start": 89.88,
+          "end": 90.06,
+          "confidence": 0.922
+        },
+        {
+          "text": "also",
+          "start": 90.06,
+          "end": 90.4,
+          "confidence": 0.985
+        },
+        {
+          "text": "we",
+          "start": 90.4,
+          "end": 90.62,
+          "confidence": 0.976
+        },
+        {
+          "text": "can",
+          "start": 90.62,
+          "end": 90.76,
+          "confidence": 0.997
+        },
+        {
+          "text": "write",
+          "start": 90.76,
+          "end": 90.98,
+          "confidence": 0.994
+        },
+        {
+          "text": "some",
+          "start": 90.98,
+          "end": 91.24,
+          "confidence": 0.995
+        },
+        {
+          "text": "text",
+          "start": 91.24,
+          "end": 91.58,
+          "confidence": 0.983
+        },
+        {
+          "text": "in",
+          "start": 91.58,
+          "end": 91.82,
+          "confidence": 0.96
+        },
+        {
+          "text": "the",
+          "start": 91.82,
+          "end": 91.96,
+          "confidence": 0.997
+        },
+        {
+          "text": "body.",
+          "start": 91.96,
+          "end": 92.18,
+          "confidence": 0.79
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "seek": 8100,
+      "start": 96.16,
+      "end": 104.9,
+      "text": " Now let's save this file and to open it in the browser we can either make a right click here and then open in default browser",
+      "tokens": [
+        51114,
+        823,
+        718,
+        311,
+        3155,
+        341,
+        3991,
+        293,
+        281,
+        1269,
+        309,
+        294,
+        264,
+        11185,
+        321,
+        393,
+        2139,
+        652,
+        257,
+        558,
+        2052,
+        510,
+        293,
+        550,
+        1269,
+        294,
+        7576,
+        11185,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.14340555667877197,
+      "compression_ratio": 1.701657458563536,
+      "no_speech_prob": 0.010492893867194653,
+      "confidence": 0.891,
+      "words": [
+        {
+          "text": "Now",
+          "start": 96.16,
+          "end": 97.04,
+          "confidence": 0.981
+        },
+        {
+          "text": "let's",
+          "start": 97.04,
+          "end": 97.34,
+          "confidence": 0.987
+        },
+        {
+          "text": "save",
+          "start": 97.34,
+          "end": 97.54,
+          "confidence": 0.996
+        },
+        {
+          "text": "this",
+          "start": 97.54,
+          "end": 97.8,
+          "confidence": 0.993
+        },
+        {
+          "text": "file",
+          "start": 97.8,
+          "end": 98.18,
+          "confidence": 0.998
+        },
+        {
+          "text": "and",
+          "start": 98.18,
+          "end": 98.86,
+          "confidence": 0.845
+        },
+        {
+          "text": "to",
+          "start": 98.86,
+          "end": 99.1,
+          "confidence": 0.992
+        },
+        {
+          "text": "open",
+          "start": 99.1,
+          "end": 99.32,
+          "confidence": 0.998
+        },
+        {
+          "text": "it",
+          "start": 99.32,
+          "end": 99.54,
+          "confidence": 0.984
+        },
+        {
+          "text": "in",
+          "start": 99.54,
+          "end": 99.74,
+          "confidence": 0.987
+        },
+        {
+          "text": "the",
+          "start": 99.74,
+          "end": 99.88,
+          "confidence": 0.987
+        },
+        {
+          "text": "browser",
+          "start": 99.88,
+          "end": 100.2,
+          "confidence": 0.97
+        },
+        {
+          "text": "we",
+          "start": 100.2,
+          "end": 100.46,
+          "confidence": 0.87
+        },
+        {
+          "text": "can",
+          "start": 100.46,
+          "end": 100.66,
+          "confidence": 0.998
+        },
+        {
+          "text": "either",
+          "start": 100.66,
+          "end": 100.98,
+          "confidence": 0.99
+        },
+        {
+          "text": "make",
+          "start": 100.98,
+          "end": 101.26,
+          "confidence": 0.977
+        },
+        {
+          "text": "a",
+          "start": 101.26,
+          "end": 101.5,
+          "confidence": 0.844
+        },
+        {
+          "text": "right",
+          "start": 101.5,
+          "end": 101.62,
+          "confidence": 0.983
+        },
+        {
+          "text": "click",
+          "start": 101.62,
+          "end": 101.9,
+          "confidence": 0.866
+        },
+        {
+          "text": "here",
+          "start": 101.9,
+          "end": 102.24,
+          "confidence": 0.986
+        },
+        {
+          "text": "and",
+          "start": 102.24,
+          "end": 102.9,
+          "confidence": 0.435
+        },
+        {
+          "text": "then",
+          "start": 102.9,
+          "end": 103.22,
+          "confidence": 0.955
+        },
+        {
+          "text": "open",
+          "start": 103.22,
+          "end": 103.94,
+          "confidence": 0.915
+        },
+        {
+          "text": "in",
+          "start": 103.94,
+          "end": 104.18,
+          "confidence": 0.345
+        },
+        {
+          "text": "default",
+          "start": 104.18,
+          "end": 104.46,
+          "confidence": 0.836
+        },
+        {
+          "text": "browser",
+          "start": 104.46,
+          "end": 104.9,
+          "confidence": 0.92
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "seek": 8100,
+      "start": 105.8,
+      "end": 109.06,
+      "text": " or also we can make a right click on the file in the explorer.",
+      "tokens": [
+        51564,
+        420,
+        611,
+        321,
+        393,
+        652,
+        257,
+        558,
+        2052,
+        322,
+        264,
+        3991,
+        294,
+        264,
+        39680,
+        13,
+        51764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.14340555667877197,
+      "compression_ratio": 1.701657458563536,
+      "no_speech_prob": 0.010492893867194653,
+      "confidence": 0.862,
+      "words": [
+        {
+          "text": "or",
+          "start": 105.8,
+          "end": 106.0,
+          "confidence": 0.557
+        },
+        {
+          "text": "also",
+          "start": 106.0,
+          "end": 106.34,
+          "confidence": 0.978
+        },
+        {
+          "text": "we",
+          "start": 106.34,
+          "end": 106.56,
+          "confidence": 0.988
+        },
+        {
+          "text": "can",
+          "start": 106.56,
+          "end": 106.72,
+          "confidence": 0.992
+        },
+        {
+          "text": "make",
+          "start": 106.72,
+          "end": 106.9,
+          "confidence": 0.994
+        },
+        {
+          "text": "a",
+          "start": 106.9,
+          "end": 107.08,
+          "confidence": 0.932
+        },
+        {
+          "text": "right",
+          "start": 107.08,
+          "end": 107.22,
+          "confidence": 0.997
+        },
+        {
+          "text": "click",
+          "start": 107.22,
+          "end": 107.46,
+          "confidence": 0.979
+        },
+        {
+          "text": "on",
+          "start": 107.46,
+          "end": 107.74,
+          "confidence": 0.989
+        },
+        {
+          "text": "the",
+          "start": 107.74,
+          "end": 107.92,
+          "confidence": 0.995
+        },
+        {
+          "text": "file",
+          "start": 107.92,
+          "end": 108.24,
+          "confidence": 0.998
+        },
+        {
+          "text": "in",
+          "start": 108.24,
+          "end": 108.58,
+          "confidence": 0.512
+        },
+        {
+          "text": "the",
+          "start": 108.58,
+          "end": 108.72,
+          "confidence": 0.995
+        },
+        {
+          "text": "explorer.",
+          "start": 108.72,
+          "end": 109.06,
+          "confidence": 0.518
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "seek": 10900,
+      "start": 110.04,
+      "end": 112.08,
+      "text": " Then open in default browser.",
+      "tokens": [
+        50364,
+        1396,
+        1269,
+        294,
+        7576,
+        11185,
+        13,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.12911435961723328,
+      "compression_ratio": 1.3661971830985915,
+      "no_speech_prob": 0.002538309432566166,
+      "confidence": 0.945,
+      "words": [
+        {
+          "text": "Then",
+          "start": 110.04,
+          "end": 110.34,
+          "confidence": 0.839
+        },
+        {
+          "text": "open",
+          "start": 110.34,
+          "end": 110.92,
+          "confidence": 0.959
+        },
+        {
+          "text": "in",
+          "start": 110.92,
+          "end": 111.26,
+          "confidence": 0.965
+        },
+        {
+          "text": "default",
+          "start": 111.26,
+          "end": 111.62,
+          "confidence": 0.985
+        },
+        {
+          "text": "browser.",
+          "start": 111.62,
+          "end": 112.08,
+          "confidence": 0.984
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "seek": 10900,
+      "start": 114.74,
+      "end": 116.82,
+      "text": " And we obtain this page in the browser.",
+      "tokens": [
+        50614,
+        400,
+        321,
+        12701,
+        341,
+        3028,
+        294,
+        264,
+        11185,
+        13,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.12911435961723328,
+      "compression_ratio": 1.3661971830985915,
+      "no_speech_prob": 0.002538309432566166,
+      "confidence": 0.986,
+      "words": [
+        {
+          "text": "And",
+          "start": 114.74,
+          "end": 114.9,
+          "confidence": 0.983
+        },
+        {
+          "text": "we",
+          "start": 114.9,
+          "end": 115.08,
+          "confidence": 0.996
+        },
+        {
+          "text": "obtain",
+          "start": 115.08,
+          "end": 115.38,
+          "confidence": 0.934
+        },
+        {
+          "text": "this",
+          "start": 115.38,
+          "end": 115.72,
+          "confidence": 0.996
+        },
+        {
+          "text": "page",
+          "start": 115.72,
+          "end": 116.06,
+          "confidence": 0.999
+        },
+        {
+          "text": "in",
+          "start": 116.06,
+          "end": 116.38,
+          "confidence": 0.987
+        },
+        {
+          "text": "the",
+          "start": 116.38,
+          "end": 116.52,
+          "confidence": 0.994
+        },
+        {
+          "text": "browser.",
+          "start": 116.52,
+          "end": 116.82,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "seek": 10900,
+      "start": 117.52,
+      "end": 125.48,
+      "text": " In the next video I will show you how to set up Visual Studio Code for web development using an extension called LiveServer.",
+      "tokens": [
+        50764,
+        682,
+        264,
+        958,
+        960,
+        286,
+        486,
+        855,
+        291,
+        577,
+        281,
+        992,
+        493,
+        23187,
+        13500,
+        15549,
+        337,
+        3670,
+        3250,
+        1228,
+        364,
+        10320,
+        1219,
+        10385,
+        31859,
+        331,
+        13,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.12911435961723328,
+      "compression_ratio": 1.3661971830985915,
+      "no_speech_prob": 0.002538309432566166,
+      "confidence": 0.869,
+      "words": [
+        {
+          "text": "In",
+          "start": 117.52,
+          "end": 117.66,
+          "confidence": 0.992
+        },
+        {
+          "text": "the",
+          "start": 117.66,
+          "end": 117.78,
+          "confidence": 0.996
+        },
+        {
+          "text": "next",
+          "start": 117.78,
+          "end": 118.04,
+          "confidence": 0.999
+        },
+        {
+          "text": "video",
+          "start": 118.04,
+          "end": 118.42,
+          "confidence": 0.998
+        },
+        {
+          "text": "I",
+          "start": 118.42,
+          "end": 118.68,
+          "confidence": 0.935
+        },
+        {
+          "text": "will",
+          "start": 118.68,
+          "end": 118.86,
+          "confidence": 0.994
+        },
+        {
+          "text": "show",
+          "start": 118.86,
+          "end": 119.08,
+          "confidence": 0.999
+        },
+        {
+          "text": "you",
+          "start": 119.08,
+          "end": 119.34,
+          "confidence": 0.988
+        },
+        {
+          "text": "how",
+          "start": 119.34,
+          "end": 119.72,
+          "confidence": 0.991
+        },
+        {
+          "text": "to",
+          "start": 119.72,
+          "end": 119.94,
+          "confidence": 0.998
+        },
+        {
+          "text": "set",
+          "start": 119.94,
+          "end": 120.2,
+          "confidence": 0.625
+        },
+        {
+          "text": "up",
+          "start": 120.2,
+          "end": 120.42,
+          "confidence": 0.99
+        },
+        {
+          "text": "Visual",
+          "start": 120.42,
+          "end": 120.8,
+          "confidence": 0.593
+        },
+        {
+          "text": "Studio",
+          "start": 120.8,
+          "end": 121.22,
+          "confidence": 0.967
+        },
+        {
+          "text": "Code",
+          "start": 121.22,
+          "end": 121.64,
+          "confidence": 0.74
+        },
+        {
+          "text": "for",
+          "start": 121.64,
+          "end": 122.06,
+          "confidence": 0.936
+        },
+        {
+          "text": "web",
+          "start": 122.06,
+          "end": 122.32,
+          "confidence": 0.747
+        },
+        {
+          "text": "development",
+          "start": 122.32,
+          "end": 122.98,
+          "confidence": 0.989
+        },
+        {
+          "text": "using",
+          "start": 122.98,
+          "end": 123.5,
+          "confidence": 0.98
+        },
+        {
+          "text": "an",
+          "start": 123.5,
+          "end": 123.86,
+          "confidence": 0.984
+        },
+        {
+          "text": "extension",
+          "start": 123.86,
+          "end": 124.3,
+          "confidence": 0.997
+        },
+        {
+          "text": "called",
+          "start": 124.3,
+          "end": 124.74,
+          "confidence": 0.99
+        },
+        {
+          "text": "LiveServer.",
+          "start": 124.74,
+          "end": 125.48,
+          "confidence": 0.58
+        }
+      ]
+    }
+  ],
+  "language": "en"
+}
