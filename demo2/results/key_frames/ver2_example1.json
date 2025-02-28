@@ -1,0 +1,54 @@
+[
+  {
+    "frame": 325,
+    "actions": "Click on the extensions button in Visual Studio Code to open the extensions sidebar."
+  },
+  {
+    "frame": 575,
+    "actions": "Type 'Open In Browser' in the extensions search bar to find the extension."
+  },
+  {
+    "frame": 625,
+    "actions": "Click on the first 'Open In Browser' extension in the list to select it."
+  },
+  {
+    "frame": 975,
+    "actions": "Click the install button to install the selected 'Open In Browser' extension."
+  },
+  {
+    "frame": 1250,
+    "actions": "Click on 'File' in the top menu to open the file menu options."
+  },
+  {
+    "frame": 1275,
+    "actions": "Select 'Open Folder' from the file menu to open the file explorer."
+  },
+  {
+    "frame": 1600,
+    "actions": "Navigate to the desktop in the file dialog and create a new folder named 'Website'."
+  },
+  {
+    "frame": 1625,
+    "actions": "Select the 'Website' folder to open it in Visual Studio Code."
+  },
+  {
+    "frame": 1650,
+    "actions": "Create a new HTML file and name it 'home.html' within the 'Website' folder."
+  },
+  {
+    "frame": 2075,
+    "actions": "Press the exclamation mark key followed by Enter to generate the HTML template."
+  },
+  {
+    "frame": 2175,
+    "actions": "Replace the title in the HTML template with 'My Website'."
+  },
+  {
+    "frame": 2350,
+    "actions": "Type 'Welcome to my website' inside the body of the HTML template."
+  },
+  {
+    "frame": 2825,
+    "actions": "Right-click the 'home.html' file and select 'Open In Default Browser' to view it in the browser."
+  }
+]
