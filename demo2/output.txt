@@ -1,0 +1,301 @@
+{
+    "reasoning_step": "The action to be completed is clicking on the extensions button to open the extensions sidebar. In the previous key frame, the extensions sidebar is not visible, indicating the action was not completed before this frame. The current frame shows a highlighted area where the extensions button appears to be clicked, matching the subtitle description. In the next sampled frame, the extensions sidebar is visible, indicating the action has been fully executed and the page has stabilized.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Click on the extensions button in Visual Studio Code to open the extensions sidebar."
+}
+
+{
+    "reasoning_step": "The action of typing 'Open In Browser' in the extensions search bar has not been completed before the previous key frame. In the current frame, there is a change in the sidebar indicating the extensions panel is open. However, typing has not been completed as 'Open In Browser' should appear in the search bar, which it does not at this frame. The next frame will likely continue this action.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Type 'Open In Browser' in the extensions search bar to find the extension."
+}
+
+{
+    "reasoning_step": "The action to be completed is to type 'Open In Browser' in the extensions search bar. In the previous key frame, the search bar was empty. Between the previous sampled frame (350) and the current frame (475), 'open in' is typed. However, the action requires the full phrase 'Open In Browser' to be input. Checking the next sampled frame (500), the full phrase 'Open In Browser' is present in the search bar, indicating the action is only fully executed at frame 500.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Type 'Open In Browser' in the extensions search bar to find the extension."
+}
+
+{
+    "reasoning_step": "The action of typing 'Open In Browser' in the extensions search bar was not completed before the previous key frame 325. In the current frame 500, the search bar is filled with 'open in browser', as shown in the highlighted area, which indicates the action is in progress or completed. Comparing frame 500 to the nearest previous sampled frame 475, the subtitle mentions typing 'OpenEnd Browser'. By frame 500, we can see the intended 'open in browser' in the search bar, and the next frame 525 shows consistent search results, indicating the action was fully executed and no further changes occurred.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Type 'Open In Browser' in the extensions search bar to find the extension."
+}
+
+{
+    "reasoning_step": "The action to be completed is clicking on the extensions button in Visual Studio Code to open the extensions sidebar. In the previous key frame and the previous sampled frame (frame 0), the sidebar was not open. In the current frame (frame 325), the red highlight indicates that the extensions button has been clicked, and the sidebar starts to appear. Analyzing the next sampled frames (frame 350 and 375), the sidebar is fully open, confirming that clicking the button caused the expected outcome. Therefore, the action is fully executed, and the current frame marks the key milestone for this action.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Click on the extensions button in Visual Studio Code to open the extensions sidebar."
+}
+
+{
+    "reasoning_step": "1. Before the previous key frame (325), the action of typing 'Open In Browser' in the extensions search bar had not been completed, as the search bar is empty in frame 325. 2. Comparing the current frame (350) with the next sampled frames (375 and 400), it is observed that the extension search term 'Open In Browser' is fully entered in the search bar in frame 350, and it remains unchanged in the subsequent frames. 3. This suggests that the action has been fully executed and the page has stabilized in frame 350.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Type 'Open In Browser' in the extensions search bar to find the extension."
+}
+
+{
+    "reasoning_step": "The action to be completed is clicking on the extensions button to open the extensions sidebar. In the current frame, the extensions button is highlighted, indicating that the sidebar is indeed opened. The next sampled frames show no further interaction related to this specific action. Therefore, the action is completed and the page has stabilized by the current frame.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Click on the extensions button in Visual Studio Code to open the extensions sidebar."
+}
+
+{
+    "reasoning_step": "The action to type 'Open In Browser' in the extensions search bar was not completed before the previous key frame (325). In frame 350, the extensions sidebar has been opened, but the text 'Open In Browser' has not been typed yet. By frame 375, no text is visible in the search bar, indicating the typing is either not done or not completed. Thus, the action is not fully executed, and the current frame is not a key frame.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Type 'Open In Browser' in the extensions search bar to find the extension."
+}
+
+{
+    "reasoning_step": "The action to type 'Open In Browser' in the search bar is not completed in the previous key frame 325. By comparing the current frame 475 to the next sampled frame 500, we can see that the term 'Open In Browser' is fully typed in the search bar and the results are displayed, which indicates the action is fully executed by frame 500, not 475.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Type 'Open In Browser' in the extensions search bar to find the extension."
+}
+
+{
+    "reasoning_step": "The action to be completed is typing 'Open In Browser' in the extensions search bar. In the current frame, the text 'open in browse' is visible, but not fully completed. In the next sampled frames, the text does not change, indicating stabilization. Therefore, the action was not completed before the previous key frame, and the current frame does not yet show the fully completed action.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Type 'Open In Browser' in the extensions search bar to find the extension."
+}
+
+{
+    "reasoning_step": "The action was not completed by the previous key frame since the search bar is still empty then. In the current frame, 'Open In Browser' has been fully entered in the search bar, indicating the action is fully executed. The search results remain the same in the next frame, indicating the current frame is a key frame.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Type 'Open In Browser' in the extensions search bar to find the extension."
+}
+
+{
+    "reasoning_step": "The action to be completed is clicking on the first 'Open In Browser' extension. The previous key frame does not show this action as completed. The current frame highlights that the extension is selected, indicating the action of clicking is complete. The page has changed to show details about the extension, which is consistent in the next sampled frames, confirming the action is fully executed.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Click on the first 'Open In Browser' extension in the list to select it."
+}
+
+{
+    "reasoning_step": "The action to be completed is clicking the install button for the 'Open In Browser' extension. In the previous key frame, the user had not interacted with the install button. In the current frame, the highlighted change shows the 'Open In Browser' extension details, but not the actual clicking of the install button. By examining the next sampled frames, it appears that the install button has not been clicked yet since the page does not reflect an installation process or confirmation. Therefore, the action has not been fully executed by the current frame.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Click the install button to install the selected 'Open In Browser' extension."
+}
+
+{
+    "reasoning_step": "The action to be completed is to click the install button for the 'Open In Browser' extension. In the current frame, the details of the 'Open In Browser' extension are displayed, but there is no indication that the install button has been clicked or that the installation process has started. The next frames should be checked to confirm the completion of the action. Thus, the action was not completed before the previous key frame, and the current frame does not show the action as fully executed.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Click the install button to install the selected 'Open In Browser' extension."
+}
+
+{
+    "reasoning_step": "The action to be completed, which is to install the 'Open In Browser' extension by clicking the install button, has not been completed before the previous key frame at 625. In the current frame at 700, the details of the extension are visible, but there is no indication that the install button has been clicked or the extension has been installed. The next sampled frames should be analyzed to see if the install action is executed. Therefore, the current frame is not a key frame.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Click the install button to install the selected 'Open In Browser' extension."
+}
+
+{
+    "reasoning_step": "The action to install the extension was not completed before the previous key frame. In the current frame, the install button is highlighted but the subtitles indicate that the installation is confirmed in the next frames. The next sampled frames show changes that confirm the action is complete.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Click the install button to install the selected 'Open In Browser' extension."
+}
+
+{
+    "reasoning_step": "The action involves clicking the install button to install the 'Open In Browser' extension. The previous key frame did not have the extension installed, and the current frame still shows information about the extension before installation. In the next sampled frame, the subtitles indicate the extension is installed, suggesting a change in state. Therefore, the action is completed between the current frame and the next sampled frame.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Click the install button to install the selected 'Open In Browser' extension."
+}
+
+{
+    "reasoning_step": "The action to click on 'File' in the top menu has not been completed before the previous key frame. In the current frame, the red highlighted area shows no interaction with the 'File' menu, and the next sampled frame also doesn't show the file menu open. Therefore, the action has not been fully executed in the current frame or subsequent frames.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Click on 'File' in the top menu to open the file menu options."
+}
+
+{
+    "reasoning_step": "The action to be completed, clicking on 'File' in the top menu, was not completed before the previous key frame. In the current frame, the 'File' menu options are not yet visible, indicating that the action has not been completed. Changes in the next sampled frames are necessary to confirm the action is fully executed. The current frame is not a key frame as the menu options are not open yet.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Click on 'File' in the top menu to open the file menu options."
+}
+
+{
+    "reasoning_step": "In the previous key frame 975, the extension is shown as installed, and there's no indication of the file menu being interacted with. By the current frame 1250, the 'File' option in the top menu is highlighted, indicating it has been clicked. The next frames 1275 and 1300 do not show further menu interactions; thus, the action to open the file menu options is fully executed by the current frame.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Click on 'File' in the top menu to open the file menu options."
+}
+
+{
+    "reasoning_step": "The action to be completed is selecting 'Open Folder' from the file menu. In the current frame, the 'Open Folder' option is highlighted, showing that it has been selected. The next frame (1300) shows the file explorer window open, indicating that the action has been executed successfully and the page has changed as a result. Therefore, the current frame is the key frame where the action is fully executed.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Select 'Open Folder' from the file menu to open the file explorer."
+}
+
+{
+    "reasoning_step": "The previous key frame shows the file dialog opening. The current frame shows the file dialog open at the 'Boofu' folder but not yet navigating to the desktop. The next sampled frames do not show navigation to the desktop or creation of a new folder. Therefore, the action is not completed in the current frame.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Navigate to the desktop in the file dialog and create a new folder named 'Website'."
+}
+
+{
+    "reasoning_step": "The action to navigate to the desktop and create a new folder is ongoing. The current frame shows the file dialog, but the folder creation is not visible. In the next sampled frame, the folder creation input is shown, indicating further action has been taken.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Navigate to the desktop in the file dialog and create a new folder named 'Website'."
+}
+
+{
+    "reasoning_step": "The action to be completed is to navigate to the desktop in the file dialog and create a new folder named 'Website'. In the previous key frame, the file dialog was not open, so the action wasn't completed before the previous key frame. In the current frame, the file dialog is open and navigated to the desktop, but a new folder hasn't been created yet. In the next sampled frames, specifically frame 1450 and 1475, the sequence is likely completed as a new folder creation is indicated in the subtitles.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Navigate to the desktop in the file dialog and create a new folder named 'Website'."
+}
+
+{
+    "reasoning_step": "The action to be completed is navigating to the desktop in the file dialog and creating a new folder named 'Website'. The current frame shows that the file dialog is open on the desktop, and the UI for creating a new folder is visible with an empty field ready for input. In the next sampled frame, the folder is named 'Website', indicating that the action has been completed.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Navigate to the desktop in the file dialog and create a new folder named 'Website'."
+}
+
+{
+    "reasoning_step": "Before the previous key frame, Visual Studio Code's 'Open Folder' dialog was open, but no folder was selected. Between the previous key frame and the current frame, the 'Website' folder was selected. By reviewing the next sampled frames, Visual Studio Code opens with the 'Website' folder, confirming the action is completed and stabilized before further actions.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Select the 'Website' folder to open it in Visual Studio Code."
+}
+
+{
+    "reasoning_step": "The action of creating a new HTML file was not completed before the previous key frame. In the current frame, the 'Website' folder has been opened, but the file creation has not occurred yet. Observing the next sampled frames shows that the Visual Studio Code interface is open but no new file called 'home.html' has been created yet. Therefore, the action is not fully executed in the current frame.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Create a new HTML file and name it 'home.html' within the 'Website' folder."
+}
+
+{
+    "reasoning_step": "The action to create a new HTML file is not visible as completed before the previous key frame. In the current frame, the layout is shown after the folder is selected, but no new file creation is evident. By the next sampled frame, we see changes that likely indicate file creation. Therefore, the current frame does not fully represent the execution of the action.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Create a new HTML file and name it 'home.html' within the 'Website' folder."
+}
+
+{
+    "reasoning_step": "The action to create a new HTML file named 'home.html' within the 'Website' folder has not been completed before the previous key frame. The current frame shows the menu selection for creating a new file. The next sampled frames show further actions related to file naming, indicating the process is ongoing.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Create a new HTML file and name it 'home.html' within the 'Website' folder."
+}
+
+{
+    "reasoning_step": "The previous key frame shows the selection of a folder. In the current frame, the HTML file named 'home.html' is visible, indicating the file has been created. The next sampled frame shows no further changes related to the file creation. Thus, the action of creating the file is completed by the current frame.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Create a new HTML file and name it 'home.html' within the 'Website' folder."
+}
+
+{
+    "reasoning_step": "The previous key frame and sampled frames show an open Visual Studio Code with the file home.html selected but no action taken. The current frame shows no change in terms of the action being described. The subtitles mention writing HTML code and using an exclamation mark to generate a template, but there is no indication of this action being completed in the current or previous frames. The next sampled frames may provide more information on whether the action was executed.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Press the exclamation mark key followed by Enter to generate the HTML template."
+}
+
+{
+    "reasoning_step": "The action to press the exclamation mark key followed by Enter to generate the HTML template is not completed before the previous key frame 1875. In the current frame 2000, the user has typed the exclamation mark, as indicated by the appearance of the Emmet abbreviation suggestion. However, the Enter key has not yet been pressed, evidenced by the absence of the generated HTML template. Therefore, the action is not fully executed in the current frame. The next sampled frames 2025 and 2050 should be checked to determine if the action is completed and the page stabilizes, indicating the right key frame.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Press the exclamation mark key followed by Enter to generate the HTML template."
+}
+
+{
+    "reasoning_step": "The action 'Press the exclamation mark key followed by Enter to generate the HTML template' was not completed before the previous key frame. By the current frame, the HTML template has been generated as seen by the appearance of the HTML code. This indicates the action has been fully executed. The next frame shows the page does not change further in relation to this action.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Press the exclamation mark key followed by Enter to generate the HTML template."
+}
+
+{
+    "reasoning_step": "The previous key frame shows the template with the default title. The current frame shows that the title 'Document' is being edited but not yet fully replaced. In the next sampled frame, the title is changed to 'My Website', indicating the action is fully executed there.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Replace the title in the HTML template with 'My Website'."
+}
+
+{
+    "reasoning_step": "The action to replace the title in the HTML template with 'My Website' was not completed before the previous key frame at frame 2075. Comparing frame 2175 and the current frame 2200, the highlighted change shows the title has been updated to 'My Website' at frame 2200. Checking the next sampled frame 2225, there are no further changes to the title, indicating that the action has been fully executed and the page has stabilized.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Replace the title in the HTML template with 'My Website'."
+}
+
+{
+    "reasoning_step": "The Previous Key Frame shows an HTML template without any text in the body. The Current Frame shows 'Welcome to my website' being typed inside the body, and no changes occur in the Next Sampled Frames. The action of typing the text has been fully executed before the Next Sampled Frames.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Type 'Welcome to my website' inside the body of the HTML template."
+}
+
+{
+    "reasoning_step": "The action to be completed is right-clicking the 'home.html' file and opening it in the default browser. In the current frame (2400), there is no indication that the file has been opened in the browser as per the images. Although the highlighted text in the current frame suggests some interaction, the action itself hasn't been executed yet, as the file is not visible in the browser. Also, there's no evidence in the previous frames that the action was completed. In the next sampled frames, there is no visible change indicating that the file is opened in the browser, showing the action is not complete by the next opportunities.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Right-click the 'home.html' file and select 'Open In Default Browser' to view it in the browser."
+}
+
+{
+    "reasoning_step": "The action of right-clicking the 'home.html' file and selecting 'Open In Default Browser' has not been completed before the previous key frame. In the current frame, the context menu is open, indicating a right-click, and the option 'Open In Default Browser' is visible but not yet selected. Therefore, the action is not fully executed yet in the current frame. Looking at the next sampled frames, the action's result would be shown once 'Open In Default Browser' is clicked and the file is opened in the browser.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Right-click the 'home.html' file and select 'Open In Default Browser' to view it in the browser."
+}
+
+{
+    "reasoning_step": "The action of right-clicking is visible in the current frame, indicating a context menu action. The next sampled frames do not show any further interaction or browser view, suggesting the action to open the file in the browser hasn't been completed yet.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Right-click the 'home.html' file and select 'Open In Default Browser' to view it in the browser."
+}
+
+{
+    "reasoning_step": "The action to open the 'home.html' file in the default browser by right-clicking is not completed in the previous key frame. In the current frame, the context menu is visible indicating the right-click action was initiated. However, the action to open it in the browser is not fully completed as the file is still in the editor view. Therefore, I will check the next sampled frames to determine if the action is completed in the subsequent frames.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Right-click the 'home.html' file and select 'Open In Default Browser' to view it in the browser."
+}
+
+{
+    "reasoning_step": "The action involves right-clicking the 'home.html' file and selecting 'Open In Default Browser'. In the Current Frame, the context menu is open, showing the 'Open In Default Browser' option highlighted. Before the Previous Key Frame, this action was not completed. In the Next Sampled Frames, no further changes are shown indicating that the item is opened in the browser, suggesting that the click hasn't been executed yet. Therefore, the action is not fully executed at the Current Frame.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Right-click the 'home.html' file and select 'Open In Default Browser' to view it in the browser."
+}
+
+{
+    "reasoning_step": "The action was not completed before the previous key frame. In the current frame, a right-click menu is visible, indicating the user is in the process of selecting 'Open in Default Browser'. The next sampled frame shows the same menu, confirming continuity. Only when the browser opens should the action be considered fully executed and a key frame selected.",
+    "action_completed_early": 0,
+    "key_frame": 0,
+    "action": "Right-click the 'home.html' file and select 'Open In Default Browser' to view it in the browser."
+}
+
+{
+    "reasoning_step": "The action to open the file in the browser was not done by the previous key frame. In the current frame, the browser is open with the webpage displayed, indicating that the right-click and open action was completed. The subsequent frames show the webpage fully loaded with no further changes.",
+    "action_completed_early": 0,
+    "key_frame": 1,
+    "action": "Right-click the 'home.html' file and select 'Open In Default Browser' to view it in the browser."
+}
+

@@ -1,5 +1,6 @@
 import ast
 import re
+import cv2
 from openai import OpenAI
 import whisper_timestamped as whisper
 import base64
@@ -24,13 +25,31 @@ class ActionsExtract:
             return base64.b64encode(image_file.read()).decode("utf-8")
     
     def extract_frames(self, output_folder, interval=4):
+        cap = cv2.VideoCapture(self.video_path)
+        fps = cap.get(cv2.CAP_PROP_FPS)
         if not os.path.exists(output_folder):
             os.makedirs(output_folder)
-            ffmpeg.input(self.video_path, ss=0).output(
-                os.path.join(output_folder, "frame_%d.jpg"), 
-                vf=f"fps=1/{interval}", 
-                start_number=0
-            ).run()
+            if not cap.isOpened():
+                raise FileNotFoundError(f"Unable to open video file: {self.video_path}")
+            skip_frames = int(fps) - 1
+            curr_frame_idx = 0
+            while(True):
+                ret, curr_frame = cap.read()
+                if not ret:
+                    break
+                cv2.imwrite(os.path.join(output_folder, f"frame_{curr_frame_idx}.png"), curr_frame)
+                is_end = False
+                for _ in range(skip_frames):
+                    ret = cap.grab()
+                    if not ret:
+                        is_end = True
+                        break
+                if is_end:
+                    break
+                curr_frame_idx += skip_frames + 1
+        cap.release()
+        return int(fps)
+
     
     def extract_subtitles(self, output_folder):
         output_audio = f"{output_folder}/{self.file_name}.wav"
@@ -57,10 +76,10 @@ class ActionsExtract:
 
         return subtitles
 
-    def gpt_input_generate(self, subtitles, interval=4):
+    def gpt_input_generate(self, subtitles, fps, interval=4):
         content = []
         segments = subtitles["segments"]
-        images = sorted(os.listdir(f"results/frames/{self.file_name}"))
+        sorted(os.listdir(f"results/frames/{self.file_name}"))
         image_num = 0
         image_curr_num = 0
         prompts = Prompt(interval)
@@ -93,12 +112,12 @@ class ActionsExtract:
                     del(words[0])
             
             for j in range(image_num, image_curr_num):
-                image_code = self.encode_image(f"results/frames/{self.file_name}/frame_{j}.jpg")
+                image_code = self.encode_image(f"results/frames/{self.file_name}/frame_{j * fps * interval}.png")
                 content.append({
                     "type":"image_url",
                     "image_url":{
                         "url": f"data:image/jpeg;base64,{image_code}",
-                        # "url": f"data:image/jpeg;base64,{j}",
+                        # "url": f"data:image/jpeg;base64,frame_{j * fps * interval}",
                         "detail":"low"
                     }
                 })
@@ -117,9 +136,9 @@ class ActionsExtract:
     
     def extract_actions(self, interval=4):
         if not os.path.exists(f"results/actions/{self.file_name}.json"):
-            self.extract_frames(f"results/frames/{self.file_name}", interval)
+            fps = self.extract_frames(f"results/frames/{self.file_name}", interval)
             subtitles = self.extract_subtitles("results/subtitles")
-            content = self.gpt_input_generate(subtitles, interval)
+            content = self.gpt_input_generate(subtitles, fps, interval)
 
             # with open("input.json", "w") as f:
             #     json.dump(content, f, indent=4, ensure_ascii=False)

@@ -140,7 +140,15 @@ class KeyFrameExtract:
         if is_curr:
             path = f"results/diffs/{self.file_name}/frame_{num}_labelled.png"
         else:
-            path = f"results/diffs/{self.file_name}/frame_{num}.png"
+            if not os.path.exists(f"results/marked_frames/{self.file_name}"):
+                os.mkdir(f"results/marked_frames/{self.file_name}")
+            path = f"results/marked_frames/{self.file_name}/{num}.png"
+            if not os.path.exists(path):
+                source_path = f"results/frames/{self.file_name}/frame_{num}.png"
+                image = cv2.imread(source_path).copy()
+                self.add_frame_number(image, num)
+                cv2.imwrite(path, image)
+
         image_code = self.encode_image(path)
         content.append({
             "type":"image_url",
@@ -160,27 +168,27 @@ class KeyFrameExtract:
             subtitles = json.load(json_file)
         segments = subtitles["segments"]
         sentence = ""
-        tokens = [
-            {
+        tokens = [{
                 "name":"<Previous Key Frame>",
                 "time":float(prev_key) / float(fps)
-            },
-            {
-                "name":"<Previous Sampled Frame>",
-                "time":float(prev) / float(fps)
-            },
-            {
-                "name":"<Current Frame>",
-                "time":float(curr) / float(fps)
-            },
-            {
-                "name":"<Next Sampled Frame>",
-                "time":float(next) / float(fps)
-            },
-        ]
+        }]
+        for i in range(len(prev)):
+            tokens.append({
+                "name":f"<Previous Sampled Frame {i}>",
+                "time":float(prev[i]) / float(fps)
+            })
+        tokens.append({
+            "name":"<Current Frame>",
+            "time":float(curr) / float(fps)
+        })
+        for i in range(len(next)):
+            tokens.append({
+                "name":f"<Next Sampled Frame {i}>",
+                "time":float(next[i]) / float(fps)
+            })
         words = []
         start_time = tokens[0]["time"]
-        end_time = tokens[3]["time"]
+        end_time = tokens[len(tokens) - 1]["time"]
         for i in range(0, len(segments)):
             if segments[i]["end"] >= start_time:
                 for j in range(0, len(segments) - i):
@@ -200,17 +208,19 @@ class KeyFrameExtract:
 {{
     "Current Frame": "{curr}",
     "Previous Key Frame": "{prev_key}",
-    "Previous Sampled Frame": "{prev}",
-    "Next Sampled Frame": "{next}",
+    "Previous Sampled Frames": "{prev}",
+    "Next Sampled Frames": "{next}",
     "Nearby Subtitles": "{sentence}",
     "Action to Be Completed": "{action}"
 }}
 """
 
-        self.add_image_to_input(content, curr, True)
         self.add_image_to_input(content, prev_key, False)
-        self.add_image_to_input(content, prev, False)
-        self.add_image_to_input(content, next, False)
+        for i in range(len(prev)):
+            self.add_image_to_input(content, prev[i], False)
+        self.add_image_to_input(content, curr, True)
+        for i in range(len(next)):
+            self.add_image_to_input(content, next[i], False)
         content.append({
             "type":"text",
             "text": prompts.get_prompts()
@@ -227,9 +237,9 @@ class KeyFrameExtract:
             "type":"text",
             "text":"[data end]"
         })
-        with open("input.txt", "a", encoding="utf-8") as file:
-            file.write(json.dumps(content, ensure_ascii=False, indent=4))
-            file.write("\n\n")
+        # with open("input.txt", "a", encoding="utf-8") as file:
+        #     file.write(json.dumps(content, ensure_ascii=False, indent=4))
+        #     file.write("\n\n")
         
         response = self.client.chat.completions.create(
             model="gpt-4o",
@@ -260,11 +270,21 @@ class KeyFrameExtract:
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
+        # Find the last frame
+        max_frame_num = -1
+        for file_name in os.listdir(f"results/frames/{self.file_name}"):
+            match = re.match(r"frame_(\d+)\.png", file_name)
+            if match:
+                num = int(match.group(1))
+                if num > max_frame_num:
+                    max_frame_num = num
+        print(max_frame_num)
+
         cap = cv2.VideoCapture(self.video_path)
         if not cap.isOpened():
             raise FileNotFoundError(f"Unable to open video file: {self.video_path}")
 
-        fps = cap.get(cv2.CAP_PROP_FPS)
+        fps = int(cap.get(cv2.CAP_PROP_FPS))
         width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
@@ -272,7 +292,7 @@ class KeyFrameExtract:
         area_threshold = int(height * 2)
         total_area_threshold = int(width * 3)
         merged_threshold = int(height / 7)
-        skip_frames = int(fps) - 1
+        skip_frames = fps - 1
 
         with open(f"results/actions/{self.file_name}.json", "r", encoding="utf-8") as f:
             actions = json.load(f)
@@ -280,31 +300,31 @@ class KeyFrameExtract:
         ret, prev_frame = cap.read()
         if not ret:
             raise ValueError("The video frame cannot be read")
-        cv2.imwrite(os.path.join(output_dir, f"frame_0.png"), prev_frame)
         prev_gray = cv2.cvtColor(prev_frame, cv2.COLOR_BGR2GRAY)
-        frame_idx = skip_frames + 1
-        prev_sample_frame = 0
-        prev_key_frame = 0
 
-        # Initialization of curr_frame
-        for _ in range(skip_frames):
-                ret = cap.grab()
-                if not ret:
-                    break
-        _, curr_frame = cap.read()
+        frame_idx = fps
+        prev_sample_frame = [0]
+        prev_key_frame = 0
 
         # Iteration of each sampled frame
         while len(actions) > 0:
-            # Gain next_frame
+            # Gain curr_frame
+            is_end = False
             for _ in range(skip_frames):
                 ret = cap.grab()
                 if not ret:
+                    is_end = True
                     break
-            ret, result = cap.read()
-            if ret:
-                next_frame = result
-            if np.array_equal(next_frame, curr_frame):
+            if is_end:
                 break
+            ret, curr_frame = cap.read()
+            if not ret:
+                break
+
+            next_sample_frame = [frame_idx + fps, frame_idx + fps * 2]
+            for i in range(2):
+                if next_sample_frame[0] > max_frame_num:
+                    del(next_sample_frame[0])
 
             # Calculate the difference between frames
             curr_gray = cv2.cvtColor(curr_frame, cv2.COLOR_BGR2GRAY)
@@ -323,7 +343,6 @@ class KeyFrameExtract:
                 rectangles = [cv2.boundingRect(contour) for contour in diff_contours]
                 rectangles = [[[x, y], [x + w, y + h]] for x, y, w, h in rectangles]
                 merged_areas = self.merge_areas(rectangles, merged_threshold)
-                cv2.imwrite(os.path.join(output_dir, f"frame_{frame_idx}.png"), curr_frame)
 
                 # Draw rectangles
                 number = 1
@@ -335,17 +354,16 @@ class KeyFrameExtract:
                         number += 1
                 self.add_frame_number(curr_frame, frame_idx)
                 cv2.imwrite(os.path.join(output_dir, f"frame_{frame_idx}_labelled.png"), curr_frame)
-                cv2.imwrite(os.path.join(output_dir, f"frame_{frame_idx + skip_frames + 1}.png"), next_frame)
 
                 prev_gray = curr_gray
                 # print(f"Frame {frame_idx}: Total area of change {total_area}, the key frame is detected")
 
                 # Give the picture to gpt for judgment
-                gpt_result = self.filter_by_gpt(frame_idx, prev_sample_frame, frame_idx + skip_frames + 1, prev_key_frame, actions[0], fps)
+                gpt_result = self.filter_by_gpt(frame_idx, prev_sample_frame, next_sample_frame, prev_key_frame, actions[0], fps)
                 while gpt_result["action_completed_early"] == 1:
                     key_frames[len(key_frames) - 1]["actions"] += actions[0]
                     del(actions[0])
-                    gpt_result = self.filter_by_gpt(frame_idx, prev_sample_frame, frame_idx + skip_frames + 1, prev_key_frame, actions[0], fps)
+                    gpt_result = self.filter_by_gpt(frame_idx, prev_sample_frame, next_sample_frame, prev_key_frame, actions[0], fps)
                 if gpt_result["key_frame"] == 1:
                     key_frames.append({
                         "frame": frame_idx,
@@ -354,12 +372,13 @@ class KeyFrameExtract:
                     prev_key_frame = frame_idx
                     del(actions[0])
 
-                prev_sample_frame = frame_idx
+                prev_sample_frame.append(frame_idx)
+                if len(prev_sample_frame) > 2:
+                    del(prev_sample_frame[0])
             # else:
                 # print(f"Frame {frame_idx}: the key frame threshold is not reached")
 
             frame_idx += skip_frames + 1
-            curr_frame = next_frame
 
         cap.release()
 

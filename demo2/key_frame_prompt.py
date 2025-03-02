@@ -20,40 +20,49 @@ These videos are from YouTube and primarily consist of screen recordings of comp
         return """
 **INPUT FORMAT**
 The input information consists of the following six parts:
+
 1. Current Frame:
 The screenshot that you need to judge. 
-The area highlighted with a red border in the screenshot indicates the region that has changed compared to the previous sampled frame. 
+The area highlighted with a red border in the screenshot indicates the region that has changed compared to the nearest previous sampled frame. 
 The red border is not part of the original video but is added later for marking purposes. 
+The purpose of the red border is to draw your attention to the pixel changes in this area. So reasoning must not include thoughts such as "the action has been executed because it is highlighted by the red border."
 The number in the top-left corner of the red border is a unique identifier for the border. 
-The white text on a black background at the bottom center of the screenshot indicates the sequence number of the frame in the video.
+
 2. Previous Key Frame:
 The most recent key frame before the current frame. 
 In this task, a key frame is defined as a frame where a user interaction has caused a significant change in the page, and the page has stabilized after the change. 
 There must be at least one complete user interaction and the resulting page change between two key frames.
-3. Previous Sampled Frame:
-A screenshot of the page a few seconds before the current frame. 
-There is a noticeable interface change between the current frame and the previous sampled frame.
-4. Next Sampled Frame:
-Usually, a screenshot of the page one second after the current frame. 
-The chronological order of the frames is typically: Previous Key Frame -> Previous Sampled Frame -> Current Frame -> Next Sampled Frame.
+
+3. Previous Sampled Frames:
+Screenshots of the page taken before the current frame, which may include 0 to 2 sampled frames.
+The time intervals between previous sampled frames and between previous sampled frame and the current frame are not fixed; they are selected based on page pixel changes. 
+
+4. Next Sampled Frames:
+Screenshots of the page taken after the current frame, which may include 0 to 2 sampled frames.
+The intervals between next sampled frames and between the current frame and next sampled frame are fixed, usually 1 second.
+
+The chronological order of the frames is typically: Previous Key Frame -> Previous Sampled Frames -> Current Frame -> Next Sampled Frames.
+All frames have a sequence number displayed at the bottom center of the screenshot, in white text on a black background, indicating the frame's position in the video.
+
 5. Nearby Subtitles:
 The explanatory subtitles from the video between the previous key frame and the next sampled frame. 
-In the subtitles, tokens such as <Previous Key Frame>, <Previous Sampled Frame>, <Current Frame>, and <Next Sampled Frame> may appear. 
+In the subtitles, tokens such as <Previous Key Frame>, <Previous Sampled Frame 0>, <Previous Sampled Frame 1>, <Current Frame>, <Next Sampled Frame 0>, and <Next Sampled Frame 1> may appear. 
 These tokens indicate the time when the corresponding frame appears in the video, and the narration happens to refer to this point.
+
 6. Action to Be Completed:
 The action that you need to judge. 
 The goal is to determine whether the action has been completed at the time of the current frame.
 
-At the beginning of the input, the following JSON data will be provided:
+The following JSON data will be provided:
 {
     "Current Frame": "Sequence number of the current frame",
     "Previous Key Frame": "Sequence number of the previous key frame",
-    "Previous Sampled Frame": "Sequence number of the previous sampled frame",
-    "Next Sampled Frame": "Sequence number of the next sampled frame, -1 means the next sampled frame does not exist",
+    "Previous Sampled Frames": "List of sequence number of the previous sampled frames",
+    "Next Sampled Frames": "List of sequence number of the next sampled frames",
     "Nearby Subtitles": "Subtitle content",
     "Action to Be Completed": "Action content"
 }
-Images of the four frames have been given to you at the beginning.
+The frames' images are provided to you in the chronological order of the video.
 
 """
 
@@ -61,15 +70,17 @@ Images of the four frames have been given to you at the beginning.
         return """
 **REASONING STEPS**
 Please follow these steps to reason carefully.
-1. First, determine whether the action to be completed was already completed before the previous key frame, and record the result.
+1. First, determine whether the action to be completed was already completed before the previous key frame which is closest to the current frame, and record the result.
 2. If it was completed, skip the following steps and proceed directly to the output. 
-If not, focus on the changes in the red-bordered area of the current frame compared to the previous sampled frame. 
-Combine this with the corresponding subtitles to infer whether the changes were caused by user interaction.
-3. If the changes were indeed caused by user interaction, mainly combine the next sampled frame to determine whether the "action to be completed" has been fully executed **before** (It's important) the current frame, meaning there are no significant page changes in the next sampled frame. 
-It should not be halfway executed, with the next sampled frame still showing the action being performed or its impact on the page not yet finished.
+3. If the changes were indeed caused by user interaction, mainly combine the next sampled frame to determine whether: **the action has been fully executed, and the page will not change again before the next action is performed.**(It's important, please remember it)
+Note that the result of the action must also appear before the current frame for it to be defined as "fully executed".
+The difference between the current frame and the previous sampled frame does not indicate that the action has been fully executed. Please do not make such a judgment.
 If it is fully executed, record that the current frame is a key frame.
 Because there may be cases where subtitles and images are not synchronized, you should not rely too heavily on subtitles for judgment, but instead primarily base your judgment on the images.
 This is very important, please make sure to remember this step.
+For example:
+-When clicking a button to open a new page, you cannot judge the current frame as a key frame based on the content displayed when the mouse hovers over the button. Instead, you should select the frame after the new page appears as the key frame.
+-When entering a keyword in a search box and the search results change instantly, you should select the frame after the keyword has been fully entered as the key frame.
 
 """
 

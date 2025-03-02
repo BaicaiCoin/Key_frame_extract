@@ -1,0 +1,18 @@
+[
+  "Click on the extensions button to open the extensions panel.",
+  "Type 'OpenEnd Browser' in the search bar to find the extension.",
+  "Click on the first extension 'Open in Browser' to select it.",
+  "Click the 'Install' button to install the 'Open in Browser' extension.",
+  "Close the extension's details page to return to the main editor.",
+  "Hide the extensions panel by clicking the extensions icon again.",
+  "Click on 'File' in the menu bar to open the file menu.",
+  "Select 'Open Folder' from the dropdown menu to choose a directory.",
+  "Create a new folder on the desktop named 'Website'.",
+  "Click 'Select Folder' to open the newly created folder in Visual Studio Code.",
+  "Create a new file named 'home.html' inside the 'Website' folder.",
+  "Type an exclamation mark '!' and press 'Enter' to generate a basic HTML template.",
+  "Change the title in the HTML template to 'My Website'.",
+  "Enter text 'Welcome to my website' inside the body tag of the HTML.",
+  "Right-click on the 'home.html' file in the file explorer.",
+  "Select 'Open in Default Browser' from the context menu to open the HTML file in a web browser."
+]
