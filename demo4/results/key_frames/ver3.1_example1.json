@@ -1,0 +1,54 @@
+[
+  {
+    "frame": 325,
+    "actions": "Click on the extensions button to open the extensions sidebar in Visual Studio Code."
+  },
+  {
+    "frame": 650,
+    "actions": "Type 'OpenEnd Browser' into the search bar to find the extension in the marketplace."
+  },
+  {
+    "frame": 675,
+    "actions": "Select the first extension from the list to view its details."
+  },
+  {
+    "frame": 1100,
+    "actions": "Click the 'Install' button to add the 'Open in Browser' extension to Visual Studio Code."
+  },
+  {
+    "frame": 1150,
+    "actions": "Hide the extensions sidebar after installing the extension."
+  },
+  {
+    "frame": 1400,
+    "actions": "Click on 'File' in the top menu, then select 'Open Folder' to choose a folder for your project."
+  },
+  {
+    "frame": 1625,
+    "actions": "Create a new folder on the desktop called 'Website', then select it to open in Visual Studio Code."
+  },
+  {
+    "frame": 1650,
+    "actions": "Create a new file named 'home.html' within the selected folder."
+  },
+  {
+    "frame": 2075,
+    "actions": "Type an exclamation mark in the HTML file and press 'Enter' to generate an HTML5 template."
+  },
+  {
+    "frame": 2175,
+    "actions": "Edit the HTML template to change the title to 'My Website'."
+  },
+  {
+    "frame": 2400,
+    "actions": "Write 'Welcome to my website' inside the body tags of the HTML file."
+  },
+  {
+    "frame": 2675,
+    "actions": "Right-click on 'home.html' and select 'Open in Default Browser' to view the HTML file in a web browser."
+  },
+  {
+    "frame": 2825,
+    "actions": "View the resulting webpage in the browser, displaying the text 'Welcome to my website'."
+  }
+]
