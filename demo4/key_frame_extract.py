@@ -279,7 +279,7 @@ class KeyFrameExtract:
                 ]
 
         while(not result_is_correct):
-            print("Ask...")
+            print("Extracting...")
             response = self.client.beta.chat.completions.parse(
                 model=self.model_version,
                 messages=messages,
@@ -296,7 +296,7 @@ class KeyFrameExtract:
                 break
             
             if result_json.key_frame:
-                print("Verify...")
+                print("Verifying...")
                 verify_content = []
                 for i in range(len(prev)):
                     self.add_image_to_input(verify_content, prev[i], False)
@@ -336,6 +336,8 @@ class KeyFrameExtract:
     def extract_by_frame_diff(self):
 
         key_frames = []
+
+        max_consecutive = 8
 
         """Initially filter key frames by inter-frame differences and locate the area of change"""
         output_dir = f"results/diffs/{self.file_name}"
@@ -378,58 +380,77 @@ class KeyFrameExtract:
         prev_sample_frame = [0]
         prev_key_frame = 0
 
+        consecutive_action_num = 0
+        roll_back_frames = []
+        step_again_frames = []
+        roll_back_prev_frames = []
+        roll_back_prev_key = 0
+
         # Iteration of each sampled frame
         while len(actions) > 0:
-            # Gain curr_frame
-            is_end = False
-            for _ in range(skip_frames):
-                ret = cap.grab()
-                if not ret:
-                    is_end = True
+            query_gpt = False
+
+            if len(step_again_frames) > 0:
+                query_gpt = True
+                frame_idx = step_again_frames[0]
+                del(step_again_frames[0])
+                next_sample_frame = [frame_idx + fps, frame_idx + fps * 2]
+                for i in range(2):
+                    if next_sample_frame[0] > max_frame_num:
+                        del(next_sample_frame[0])
+
+            else:
+                # Gain curr_frame
+                is_end = False
+                for _ in range(skip_frames):
+                    ret = cap.grab()
+                    if not ret:
+                        is_end = True
+                        break
+                if is_end:
                     break
-            if is_end:
-                break
-            ret, curr_frame = cap.read()
-            if not ret:
-                break
+                ret, curr_frame = cap.read()
+                if not ret:
+                    break
 
-            next_sample_frame = [frame_idx + fps, frame_idx + fps * 2]
-            for i in range(2):
-                if next_sample_frame[0] > max_frame_num:
-                    del(next_sample_frame[0])
+                next_sample_frame = [frame_idx + fps, frame_idx + fps * 2]
+                for i in range(2):
+                    if next_sample_frame[0] > max_frame_num:
+                        del(next_sample_frame[0])
 
-            # Calculate the difference between frames
-            curr_gray = cv2.cvtColor(curr_frame, cv2.COLOR_BGR2GRAY)
-            diff = cv2.absdiff(prev_gray, curr_gray)
-            _, diff_thresh = cv2.threshold(diff, diff_threshold, 255, cv2.THRESH_BINARY)
-            diff_contours, _ = cv2.findContours(diff_thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                # Calculate the difference between frames
+                curr_gray = cv2.cvtColor(curr_frame, cv2.COLOR_BGR2GRAY)
+                diff = cv2.absdiff(prev_gray, curr_gray)
+                _, diff_thresh = cv2.threshold(diff, diff_threshold, 255, cv2.THRESH_BINARY)
+                diff_contours, _ = cv2.findContours(diff_thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-            # Calculate the total area of change
-            total_area = 0
-            for contour in diff_contours:
-                area = cv2.contourArea(contour)
-                total_area += area
+                # Calculate the total area of change
+                total_area = 0
+                for contour in diff_contours:
+                    area = cv2.contourArea(contour)
+                    total_area += area
 
-            # Merge change areas
-            if total_area > total_area_threshold:
-                rectangles = [cv2.boundingRect(contour) for contour in diff_contours]
-                rectangles = [[[x, y], [x + w, y + h]] for x, y, w, h in rectangles]
-                merged_areas = self.merge_areas(rectangles, merged_threshold)
+                # Merge change areas
+                if total_area > total_area_threshold:
+                    query_gpt = True
+                    rectangles = [cv2.boundingRect(contour) for contour in diff_contours]
+                    rectangles = [[[x, y], [x + w, y + h]] for x, y, w, h in rectangles]
+                    merged_areas = self.merge_areas(rectangles, merged_threshold)
 
-                # Draw rectangles
-                number = 1
-                for area in merged_areas:
-                    x1, y1 = area[0]
-                    x2, y2 = area[1]
-                    if (x2 - x1) * (y2 - y1) > area_threshold:
-                        self.draw_highlighted_rectangle(curr_frame, x1, y1, x2, y2, number)
-                        number += 1
-                self.add_frame_number(curr_frame, frame_idx)
-                cv2.imwrite(os.path.join(output_dir, f"frame_{frame_idx}_labelled.png"), curr_frame)
+                    # Draw rectangles
+                    number = 1
+                    for area in merged_areas:
+                        x1, y1 = area[0]
+                        x2, y2 = area[1]
+                        if (x2 - x1) * (y2 - y1) > area_threshold:
+                            self.draw_highlighted_rectangle(curr_frame, x1, y1, x2, y2, number)
+                            number += 1
+                    self.add_frame_number(curr_frame, frame_idx)
+                    cv2.imwrite(os.path.join(output_dir, f"frame_{frame_idx}_labelled.png"), curr_frame)
 
-                prev_gray = curr_gray
-                # print(f"Frame {frame_idx}: Total area of change {total_area}, the key frame is detected")
+                    prev_gray = curr_gray
 
+            if query_gpt:
                 # Give the picture to gpt for judgment
                 gpt_result = self.filter_by_gpt(frame_idx, prev_sample_frame, next_sample_frame, prev_key_frame, actions[0], fps)
                 # while gpt_result.action_completed_early == 1:
@@ -444,11 +465,27 @@ class KeyFrameExtract:
                     prev_key_frame = frame_idx
                     del(actions[0])
 
+                    consecutive_action_num = 0
+                    roll_back_prev_frames = [prev_sample_frame[-1], frame_idx]
+                    roll_back_prev_key = frame_idx
+                    roll_back_frames = []
+                else:
+                    consecutive_action_num += 1
+                    roll_back_frames.append(frame_idx)
+                    if consecutive_action_num >= max_consecutive:
+                        print("Roll back...")
+                        key_frames[len(key_frames) - 1]["actions"] += actions[0]
+                        del(actions[0])
+                        step_again_frames = roll_back_frames
+                        consecutive_action_num = 0
+                        prev_sample_frame = roll_back_prev_frames
+                        prev_key_frame =  roll_back_prev_key
+                        roll_back_frames = []
+                        continue
+                        
                 prev_sample_frame.append(frame_idx)
                 if len(prev_sample_frame) > 2:
                     del(prev_sample_frame[0])
-            # else:
-                # print(f"Frame {frame_idx}: the key frame threshold is not reached")
 
             frame_idx += skip_frames + 1
 
